@@ -1,38 +1,171 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar*/
+nav {
+  background: rgb(92, 79, 79);
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding-left: 50px;
+
+  font-size: 25px;
+}
+/* Home page */
+.addContact {
+  margin: 25px 2px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.addContact a {
+  text-decoration: none;
+  color: white;
+  padding: 8px;
+  font-size: 20px;
+}
+.addBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  background: chocolate;
+  transition: all 0.5s linear;
+}
+.addBtn:hover {
+  cursor: pointer;
+  background: rgb(136, 59, 5);
+}
+.tableContainer {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: chocolate;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table tr:hover {
+  background-color: #ddd;
+}
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+}
+.editBtn {
+  text-decoration: none;
+  color: white;
+  background: rgb(81, 223, 81);
+  padding: 2px 5px;
+  transition: all 0.5s linear;
+}
+.editBtn:hover {
+  background: green;
+}
+.deleteBtn {
+  color: white;
+  background: rgb(221, 65, 65);
+  border: none;
+  padding: 2px 5px;
+  font-size: 16px;
+  transition: all 0.5s linear;
+}
+.deleteBtn:hover {
+  cursor: pointer;
+  background: rgb(173, 6, 6);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*Add Contact & Edit Contact*/
+.editContactContainer,
+.addContactContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 50px;
+  height: 80vh;
+}
+
+.editFormContainer,
+.addFormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 5px 10px #888888;
+}
+
+.editContactContainer input,
+.addFormContainer input {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.editBtnContainer,
+.addBtnContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.editBtnContainer a,
+.addBtnContainer a {
+  margin-left: 10px;
+  padding: 2px 5px;
+  text-decoration: none;
+  background: chocolate;
   color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: all 0.5s linear;
 }
-
-.App-link {
-  color: #61dafb;
+.editBtnContainer a:hover,
+.addBtnContainer a:hover {
+  background: rgb(151, 70, 12);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editBtnContainer button,
+.addFormContainer button {
+  border: none;
+  background: rgb(105, 81, 81);
+  padding: 6px;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.5s linear;
+}
+.editBtnContainer button:hover,
+.addFormContainer button:hover {
+  cursor: pointer;
+  background: rgb(29, 18, 18);
 }
