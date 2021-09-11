@@ -9,12 +9,14 @@ const EditContact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const { id } = useParams();
+
   const contacts = useSelector((state) => state);
   const history = useHistory();
   const dispatch = useDispatch();
   const currentContact = contacts.find(
     (contact) => contact.id === parseInt(id)
   );
+
   useEffect(() => {
     if (currentContact) {
       setFullName(currentContact.fullName);
