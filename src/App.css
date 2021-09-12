@@ -169,3 +169,33 @@ table tr:hover {
   cursor: pointer;
   background: rgb(29, 18, 18);
 }
+
+/* media screen*/
+
+@media screen and (max-width: 685px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  nav {
+    width: 100%;
+  }
+  .addContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .addContact a {
+    margin-top: 15px;
+  }
+  .tableContainer {
+    width: min-content;
+  }
+}
+@media screen and (max-width: 545px) {
+  body {
+    width: 100vw;
+  }
+}
