@@ -244,11 +244,16 @@ table tr:hover {
   }
 }
 @media screen and (max-width: 445px) {
+  #root {
+    width: 400px;
+  }
   nav {
     margin-left: 15px;
   }
   .addContact {
     margin-left: 43px;
+    width: 500px;
+    justify-content: right;
   }
   .tableContainer {
     justify-content: right;
