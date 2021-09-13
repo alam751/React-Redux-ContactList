@@ -234,6 +234,7 @@ table tr:hover {
   }
   .btnContainer {
     flex-direction: column;
+    width: auto;
   }
   .deleteBtn {
     margin-top: 5px;
