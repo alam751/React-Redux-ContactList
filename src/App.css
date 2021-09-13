@@ -5,14 +5,17 @@
 }
 body {
   width: 100%;
+  margin: auto;
 }
 
 /* Navbar*/
 nav {
   background: rgb(92, 79, 79);
+  width: 100%;
   height: 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 nav a {
@@ -48,10 +51,11 @@ nav a {
   background: rgb(136, 59, 5);
 }
 .tableContainer {
-  margin-top: 50px;
+  margin: 50px auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 90%;
 }
 table {
   font-family: Arial, Helvetica, sans-serif;
@@ -60,7 +64,6 @@ table {
 table th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: chocolate;
   color: white;
   text-align: center;
@@ -112,7 +115,7 @@ table tr:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin: 50px auto;
   height: 80vh;
 }
 
@@ -175,16 +178,7 @@ table tr:hover {
 
 /* media screen*/
 
-@media screen and (max-width: 685px) {
-  #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  nav {
-    width: 100%;
-  }
+@media screen and (max-width: 656px) {
   .addContact {
     display: flex;
     flex-direction: column;
@@ -192,28 +186,20 @@ table tr:hover {
   }
   .addContact a {
     margin-top: 15px;
+    font-size: 15px;
   }
-  /* .tableContainer {
-    width: min-content;
-  } */
 }
-@media screen and (max-width: 545px) {
-  nav {
-    width: 530px;
-    justify-content: center;
-  }
+@media screen and (max-width: 540px) {
   .addContact {
-    margin-top: 25px;
-    margin-left: 27px;
-    width: 500px;
+    margin: 25px auto;
   }
 
   .addContact h1 {
     font-size: 25px;
+    text-align: center;
   }
   .tableContainer {
-    margin-left: 25px;
-    width: 500px;
+    margin: 15px auto;
   }
   table td,
   table th {
@@ -222,46 +208,41 @@ table tr:hover {
   .btnContainer {
     width: 100px;
   }
-  .addContactContainer,
-  .editContactContainer {
-    justify-content: right;
-    margin-left: 25px;
+
+  .editFormContainer,
+  .addFormContainer {
+    width: 300px;
   }
 }
-@media screen and (max-width: 485px) {
-  .tableContainer {
-    margin-left: 33px;
-  }
-  table td,
-  table th {
-    font-size: 15px;
-    text-align: center;
-  }
-  .addContactContainer,
-  .editContactContainer {
-    justify-content: right;
-    margin-left: 45px;
+@media screen and (max-width: 500px) {
+  body {
+    margin: auto;
+    width: max-content;
   }
 }
-@media screen and (max-width: 445px) {
-  #root {
-    width: 400px;
+@media screen and (max-width: 420px) {
+  body {
+    width: 100%;
+    margin: auto;
   }
-  nav {
-    margin-left: 15px;
+  .addContact h1 {
+    font-size: 20px;
   }
-  .addContact {
-    margin-left: 43px;
-    width: 500px;
-    justify-content: right;
+  .btnContainer {
+    flex-direction: column;
   }
-  .tableContainer {
-    justify-content: right;
-    margin-left: 42px;
+  .deleteBtn {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 370px) {
+  body {
+    margin: auto;
+    width: max-content;
   }
   .addContactContainer,
-  .editContactContainer {
-    justify-content: right;
-    margin-left: 70px;
+  .editBtnContainer {
+    margin: 30px;
+    width: auto;
   }
 }
