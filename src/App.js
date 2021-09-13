@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 const App = () => {
   return (
     <>
-      <ToastContainer />
+      <ToastContainer autoClose={2000} />
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
